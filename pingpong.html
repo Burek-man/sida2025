@@ -7,8 +7,9 @@
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-  <link rel="css" href="css3.css">
+  <link rel="css" href="css1.css">
 </head>
+<h2>Anders-spelar-minecraft.se</h2>
 <body>  
 
 
@@ -25,11 +26,11 @@
       <div class="dropdown-content">
         <div class="dropdown-item">
               
-     <li> <a href="sida1.html">hem</a> </li>
-        
-    <li> <a href="tictactoe.html">tictactoe</a> </li>
-       
-    <li>  <a href="pingpong.html">pingpong</a> </li>
+          <li> <a href="sida1.html">hem</a> </li>
+            
+          <li> <a href="pingpong.html">ping pong </a> </li>
+             
+          <li>  <a href="help.html">hjälp</a> </li>
      
     
           
@@ -54,19 +55,12 @@
     justify-content: center;
   }
 
-</style>
+</style>  
+
+
+      <button id="toggle_btn" class="button is-dark" onclick="toggle(this)"><img id="icon" src="vit_sol.png" alt=""></button>
+      <!--<button class="button is-text" onclick="toggle()"><img src="moon-solid-24.png" alt=""></button> -->
       
-      
-      <h2>Anders-spelar-minecraft.se</h2>
-
-
-      
-      
-
-
-<button class="button is-text" onclick="toggle()"><img src="vit_sol.png" alt=""></button>
-<button class="button is-text" onclick="toggle()"><img src="moon-solid-24.png" alt=""></button>
-
 
 
 
@@ -220,11 +214,28 @@
     
     
 
+    let light_mode = true;
+let btn = document.getElementById("toggle_btn")
 function toggle(){
-let html = document.getElementsByTagName("html")
-html[0].classList.toggle("theme-light")
-html[0].classList.toggle("theme-dark")
+  let html = document.getElementsByTagName("html")
+  if(light_mode){
+    html[0].classList.remove("theme-light")
+    html[0].classList.add("theme-dark")
+    document.getElementById("icon").src = "moon-solid-24.png";
+    btn.classList.remove("is-dark");
+    btn.classList.add("is-light");
+    light_mode = false
+  }else{
+    html[0].classList.add("theme-light")
+    html[0].classList.remove("theme-dark")
+    document.getElementById("icon").src = "vit_sol.png";
+    btn.classList.add("is-dark");
+    btn.classList.remove("is-light");
+    light_mode = true
   }
+
+}
+
 
 
 
