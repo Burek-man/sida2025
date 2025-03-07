@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anders-spelar-minecraft</title>
+    <title>Anders spelbolag AB</title>
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
   <link rel="css" href="css1.css">
 </head>
-<h2>Anders-spelar-minecraft.se</h2>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+        <figure>
+          <h2>Anders spelbolag AB</h2>        
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
 <body>  
 
 
   <div class="dropdown is-hoverable">
     <div class="dropdown-trigger">
       <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-        <span>Hover me</span>
+        <span>Meny</span>
         <span class="icon is-small">
           <i class="fas fa-angle-down" aria-hidden="true"></i>
         </span>
@@ -61,10 +70,6 @@
       <button id="toggle_btn" class="button is-dark" onclick="toggle(this)"><img id="icon" src="vit_sol.png" alt=""></button>
       <!--<button class="button is-text" onclick="toggle()"><img src="moon-solid-24.png" alt=""></button> -->
       
-
-
-
-
 
     <canvas width="750" height="585" id="game"></canvas>
     <script>
@@ -212,9 +217,7 @@
 
     requestAnimationFrame(loop);
     
-    
-
-    let light_mode = true;
+     let light_mode = true;
 let btn = document.getElementById("toggle_btn")
 function toggle(){
   let html = document.getElementsByTagName("html")
